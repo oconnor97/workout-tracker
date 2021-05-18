@@ -1,12 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const logger = require("morgan");
+const logger = require("morgan");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 
 app.use(logger("dev"));
+
+app.use(require("./routes/htmlRoutes"))
 
 
 app.use(express.urlencoded({ extended: true }));

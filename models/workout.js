@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// const { Workout } = require(".");
+
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({

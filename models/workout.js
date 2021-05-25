@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { Workout } = require(".");
+// const { Workout } = require(".");
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
@@ -42,8 +42,14 @@ const workoutSchema = new Schema({
 
 
         }
-    ]
-})
+    ],
+
+});
+
+workoutSchema.methods.totalDuration = () => {
+    console.log('hi')
+}
+
 
 
 const Workout = mongoose.model("Workout", workoutSchema);

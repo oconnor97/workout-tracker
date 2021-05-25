@@ -6,4 +6,6 @@ router.get('/stats', (req, res) => res.sendFile(path.join(__dirname, '../public/
 
 router.get('/', (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')));
 
+// router.get('*', (req, res) => res.redirect('/'));
+
 module.exports = router;

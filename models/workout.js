@@ -28,16 +28,13 @@ const workoutSchema = new Schema({
 
             weight: {
                 type: Number,
-                required: "Weight is required"
             },
 
             reps: {
                 type: Number,
-                required: "Reps is required"
             },
             sets: {
                 type: Number,
-                required: "Sets are required"
             }
 
 
@@ -46,9 +43,9 @@ const workoutSchema = new Schema({
 
 });
 
-workoutSchema.methods.totalDuration = () => {
-    console.log('hi')
-}
+// workoutSchema.methods.totalDuration = () => {
+//     console.log('hi')
+// }
 
 
 

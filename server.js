@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(logger("dev"));
 
-app.use(require("./routes/htmlRoutes"))
+app.use(require("./routes/htmlRoutes"));
+app.use(require("./routes/apiRoutes"));
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use(express.static('public'))
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.listen(PORT, () => {

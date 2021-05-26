@@ -25,6 +25,7 @@ router.get('/api/workouts', (req, res) => {
 
 // Create Workouts
 router.post('/api/workouts', ({ body }, res) => {
+    console.log(body)
     Workout.create(body)
         .then(data => {
             res.json(data)
@@ -37,6 +38,7 @@ router.post('/api/workouts', ({ body }, res) => {
 // update a workout
 
 router.put('/api/workouts/:id', (req, res) => {
+    console.log(req.body)
     Workout.findByIdAndUpdate(req.params.id,
         { $push: { exercises: req.body } })
         .then(data => {

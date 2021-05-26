@@ -112,8 +112,9 @@ async function handleFormSubmit(event) {
     workoutData.sets = Number(setsInput.value.trim());
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
-  }
 
+  }
+  console.log(workoutData)
   await API.addExercise(workoutData);
   clearInputs();
   toast.classList.add("success");
@@ -142,7 +143,7 @@ if (workoutTypeSelect) {
 }
 if (completeButton) {
   completeButton.addEventListener("click", function (event) {
-    shouldNavigateAway = true;
+    // shouldNavigateAway = true;
     handleFormSubmit(event);
   });
 }
